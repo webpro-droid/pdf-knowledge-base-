@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="searchAll">全部 PDF - 我的 PDF 知识库</title>
+  <meta name="description" content="浏览全部 PDF 资料，按分类筛选，按关键词搜索。">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">📚</span>
+      <span data-i18n="siteName">我的 PDF 知识库</span>
+    </a>
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" data-i18n="searchPlaceholder" placeholder="搜 PDF...">
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="navHome">首页</a>
+      <a href="search.html" class="active" data-i18n="navAll">全部 PDF</a>
+      <a href="about.html" data-i18n="navAbout">关于</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="breadcrumb">
+    <a href="index.html" data-i18n="detailBreadcrumb">首页</a> <span>›</span> <span data-i18n="searchBreadcrumb">全部 PDF</span>
+  </div>
+
+  <div class="filter-bar" id="filterBar"></div>
+
+  <div class="ad-banner" style="margin:0 0 24px;padding:0;">
+    <div class="ad-placeholder" data-i18n="adPlaceholder">📢 Google AdSense 广告位</div>
+  </div>
+
+  <div class="section-header">
+    <h2 class="section-title" id="resultTitle" data-i18n="searchResultAll">全部 PDF</h2>
+    <span style="color:#64748b;font-size:0.9rem;" id="resultCount"></span>
+  </div>
+  <div class="resource-grid" id="resourceGrid"></div>
+
+  <div class="ad-banner" style="margin:24px 0 0;padding:0;">
+    <div class="ad-placeholder" data-i18n="adPlaceholder">📢 Google AdSense 广告位</div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-bottom">
+    <p data-i18n="footerCopyright">© 2025 我的 PDF 知识库 | Powered by GitHub Pages</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop">↑</button>
+
+<div class="ad-sticky-bottom" id="adSticky">
+  <button class="ad-sticky-close" onclick="document.getElementById('adSticky').style.display='none'" title="关闭">✕</button>
+  <span>📢 Google AdSense</span>
+</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

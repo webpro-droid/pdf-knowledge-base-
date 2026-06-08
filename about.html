@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="navAbout">关于 - 我的 PDF 知识库</title>
+  <meta name="description" content="关于我的 PDF 知识库 — 一个干净好用的 PDF 知识分享平台。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">📚</span>
+      <span data-i18n="siteName">我的 PDF 知识库</span>
+    </a>
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="headerSearch" data-i18n="searchPlaceholder" placeholder="搜 PDF...">
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="navHome">首页</a>
+      <a href="search.html" data-i18n="navAll">全部 PDF</a>
+      <a href="about.html" class="active" data-i18n="navAbout">关于</a>
+    </nav>
+  </div>
+</header>
+
+<div class="detail-container">
+  <div class="breadcrumb">
+    <a href="index.html" data-i18n="detailBreadcrumb">首页</a> <span>›</span> <span data-i18n="navAbout">关于</span>
+  </div>
+
+  <h1 style="font-size:1.8rem;font-weight:700;margin-bottom:24px;" data-i18n="aboutTitle">📄 关于这个知识库</h1>
+
+  <div class="ad-banner" style="margin:0 0 24px;padding:0;">
+    <div class="ad-placeholder" data-i18n="adPlaceholder">📢 Google AdSense 广告位</div>
+  </div>
+
+  <div class="detail-content">
+    <h2 data-i18n="aboutWhatTitle">🎯 这是什么？</h2>
+    <p data-i18n="aboutWhatContent">一个简洁的 PDF 知识库，把各种实用知识整理成 PDF，方便大家浏览和下载。</p>
+
+    <h2 data-i18n="aboutScopeTitle">📂 知识范围</h2>
+    <p data-i18n="aboutScopeContent">技术文档、生活百科、学习笔记、工作资料、兴趣爱好、健康养生……只要是对别人有用的知识，都可以放进来。</p>
+
+    <h2 data-i18n="aboutFAQTitle">❓ 常见问题</h2>
+
+    <h3 data-i18n="aboutFAQDownload">PDF 怎么下载？</h3>
+    <p data-i18n="aboutFAQDownloadA">点击任意 PDF 进入详情页，点击「下载 PDF」按钮即可。所有资料完全免费。</p>
+
+    <h3 data-i18n="aboutFAQSubmit">我想分享自己的 PDF，怎么投稿？</h3>
+    <p data-i18n="aboutFAQSubmitA">欢迎！联系站长（联系方式见下方），把你的 PDF 发过来，审核后会收录到知识库中。</p>
+
+    <h3 data-i18n="aboutFAQMakeMoney">网站怎么赚钱？</h3>
+    <p data-i18n="aboutFAQMakeMoneyA">通过页面上的 Google AdSense 广告获取收入，不影响用户免费使用。</p>
+
+    <h2 data-i18n="aboutContactTitle">📬 联系方式</h2>
+    <ul>
+      <li data-i18n="aboutContactEmail">📧 邮箱：替换为你的真实邮箱</li>
+      <li data-i18n="aboutContactWechat">💬 微信：替换为你的微信</li>
+    </ul>
+
+    <h2 data-i18n="aboutCopyrightTitle">⚖️ 版权声明</h2>
+    <p data-i18n="aboutCopyrightContent">本站 PDF 资料来源于网络收集与用户分享，仅供个人学习交流使用。如果侵犯了您的权益，请联系我们删除。</p>
+  </div>
+
+  <div class="ad-banner" style="margin:24px 0;padding:0;">
+    <div class="ad-placeholder" data-i18n="adPlaceholder">📢 Google AdSense 广告位</div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-bottom">
+    <p data-i18n="footerCopyright">© 2025 我的 PDF 知识库 | Powered by GitHub Pages</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop">↑</button>
+
+<div class="ad-sticky-bottom" id="adSticky">
+  <button class="ad-sticky-close" onclick="document.getElementById('adSticky').style.display='none'" title="关闭">✕</button>
+  <span>📢 Google AdSense</span>
+</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

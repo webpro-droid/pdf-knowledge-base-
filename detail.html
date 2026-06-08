@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="siteName">PDF 详情 - 我的 PDF 知识库</title>
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .pdf-viewer {
+      background: #f1f5f9;
+      border-radius: 12px;
+      padding: 60px 20px;
+      text-align: center;
+      margin: 24px 0;
+    }
+    .pdf-viewer .pdf-icon { font-size: 4rem; margin-bottom: 16px; }
+    .pdf-viewer h3 { margin-bottom: 8px; color: #1e293b; }
+    .pdf-viewer p { color: #64748b; margin-bottom: 20px; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .tag {
+      padding: 4px 12px;
+      background: #dbeafe;
+      color: #2563eb;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">📚</span>
+      <span data-i18n="siteName">我的 PDF 知识库</span>
+    </a>
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="headerSearch" data-i18n="searchPlaceholder" placeholder="搜 PDF...">
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="navHome">首页</a>
+      <a href="search.html" data-i18n="navAll">全部 PDF</a>
+      <a href="about.html" data-i18n="navAbout">关于</a>
+    </nav>
+  </div>
+</header>
+
+<div class="detail-container">
+
+  <div class="breadcrumb" id="breadcrumb"></div>
+
+  <div class="ad-sidebar" style="margin-bottom:24px;">
+    <span class="ad-sidebar-icon">📢</span>
+    <span data-i18n="adPlaceholder">Google AdSense</span>
+  </div>
+
+  <div class="detail-header">
+    <span class="detail-badge" id="detailBadge"></span>
+    <h1 class="detail-title" id="detailTitle"></h1>
+
+    <div class="detail-info">
+      <span>📄 <span id="detailPages"></span></span>
+      <span>💾 <span id="detailSize"></span></span>
+    </div>
+
+    <div class="tag-list" id="tagList"></div>
+
+    <div class="detail-actions" style="margin-top:20px;">
+      <a href="#" class="btn-primary" id="btnDownload" style="font-size:1rem;" data-i18n="detailDownload">📥 下载 PDF</a>
+      <button class="btn-outline" onclick="window.print()" data-i18n="detailPrint">🖨️ 打印</button>
+    </div>
+  </div>
+
+  <div class="ad-banner" style="margin:0 0 24px;padding:0;">
+    <div class="ad-placeholder" data-i18n="adPlaceholder">📢 Google AdSense 广告位</div>
+  </div>
+
+  <div class="detail-content">
+    <h2 data-i18n="detailDescTitle">📌 内容简介</h2>
+    <p id="detailDesc"></p>
+
+    <div class="pdf-viewer">
+      <div class="pdf-icon">📄</div>
+      <h3 id="pdfFileName">文件名.pdf</h3>
+      <p data-i18n="detailClickToDownload">点击上方「下载 PDF」按钮获取完整文件</p>
+      <p style="font-size:0.85rem;color:#94a3b8;" data-i18n="detailFilePathHint">提示：把真实的 PDF 文件放到 pdf/ 文件夹下，然后修改 js/data.js 里的 file 字段即可</p>
+    </div>
+  </div>
+
+  <div class="ad-banner" style="margin:24px 0;padding:0;">
+    <div class="ad-placeholder" data-i18n="adPlaceholder">📢 Google AdSense 广告位</div>
+  </div>
+
+  <div class="ad-sidebar" style="margin-bottom:28px;">
+    <span class="ad-sidebar-icon">📢</span>
+    <span data-i18n="adPlaceholder">Google AdSense</span>
+  </div>
+
+  <div id="relatedSection" style="display:none;">
+    <div class="section-header">
+      <h2 class="section-title" data-i18n="detailRelated">📌 同分类下的其他 PDF</h2>
+    </div>
+    <div class="resource-grid" id="relatedResources"></div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-bottom">
+    <p data-i18n="footerCopyright">© 2025 我的 PDF 知识库 | Powered by GitHub Pages</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop">↑</button>
+
+<div class="ad-sticky-bottom" id="adSticky">
+  <button class="ad-sticky-close" onclick="document.getElementById('adSticky').style.display='none'" title="关闭">✕</button>
+  <span>📢 Google AdSense</span>
+</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

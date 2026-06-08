@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="siteName">我的 PDF 知识库</title>
+  <meta name="description" data-i18n="siteDesc" content="一个干净、好搜的 PDF 知识库。各类实用知识整理成 PDF，免费浏览下载。">
+  <meta name="keywords" data-i18n-content="siteKeywords" content="PDF下载,知识库,免费资料,技术文档,学习笔记">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">📚</span>
+      <span data-i18n="siteName">我的 PDF 知识库</span>
+    </a>
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="headerSearch" data-i18n="searchPlaceholder" placeholder="搜 PDF，如：菜谱、Python、简历模板...">
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" class="active" data-i18n="navHome">首页</a>
+      <a href="search.html" data-i18n="navAll">全部 PDF</a>
+      <a href="about.html" data-i18n="navAbout">关于</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1 data-i18n="heroTitle">📄 各类知识，一搜即达</h1>
+    <p data-i18n="heroDesc">技术文档、生活百科、学习笔记、工作资料——把知识整理成 PDF，方便浏览和下载</p>
+    <div class="hero-search">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="heroSearch" data-i18n="heroSearchPlaceholder" placeholder="搜一下你想了解的知识...">
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="num" id="totalResources">20</div>
+        <div class="label" data-i18n="heroStatFiles">份 PDF</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num" id="totalCategories">8</div>
+        <div class="label" data-i18n="heroStatCats">个分类</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ad-banner">
+  <div class="ad-placeholder" data-i18n="adPlaceholder">📢 Google AdSense 广告位 — 上线后替换为你的广告代码</div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title" data-i18n="sectionCategories">📂 按分类浏览</h2>
+      <a href="search.html" class="section-link" data-i18n="viewAll">查看全部 →</a>
+    </div>
+    <div class="category-grid" id="categoryGrid"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title" data-i18n="sectionLatest">🆕 最近更新</h2>
+      <a href="search.html" class="section-link" data-i18n="viewAll">查看全部 →</a>
+    </div>
+    <div class="resource-grid" id="newResources"></div>
+  </div>
+</section>
+
+<div class="ad-banner">
+  <div class="ad-placeholder" data-i18n="adPlaceholder">📢 Google AdSense 广告位 — 上线后替换为你的广告代码</div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title" data-i18n="sectionAll">📋 全部 PDF</h2>
+      <a href="search.html" class="section-link" data-i18n="viewAll">查看全部 →</a>
+    </div>
+    <div class="resource-grid" id="hotResources"></div>
+  </div>
+</section>
+
+<div class="ad-banner">
+  <div class="ad-placeholder" data-i18n="adPlaceholder">📢 Google AdSense 广告位 — 上线后替换为你的广告代码</div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>📚 <span data-i18n="siteName">我的 PDF 知识库</span></h4>
+      <a href="about.html" data-i18n="footerAbout">关于本站</a>
+      <a href="about.html#faq" data-i18n="footerFAQ">常见问题</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footerCats">📂 分类</h4>
+      <a href="search.html?category=tech" data-i18n="catTech">技术文档</a>
+      <a href="search.html?category=life" data-i18n="catLife">生活百科</a>
+      <a href="search.html?category=study" data-i18n="catStudy">学习笔记</a>
+      <a href="search.html?category=work" data-i18n="catWork">工作资料</a>
+    </div>
+    <div class="footer-col">
+      <h4>📢 声明</h4>
+      <p style="font-size:0.85rem;color:#94a3b8;" data-i18n="footerDisclaimer">本站 PDF 均来源于网络收集与用户分享，仅供个人学习交流使用。如有侵权请联系删除。</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-i18n="footerCopyright">© 2025 我的 PDF 知识库 | Powered by GitHub Pages</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" title="回到顶部">↑</button>
+
+<div class="ad-sticky-bottom" id="adSticky">
+  <button class="ad-sticky-close" onclick="document.getElementById('adSticky').style.display='none'" title="关闭">✕</button>
+  <span>📢 Google AdSense</span>
+</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
