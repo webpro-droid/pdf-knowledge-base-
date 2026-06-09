@@ -167,6 +167,67 @@ function initDetail() {
 
   document.title = r.title + ' - ' + t('siteName');
 
+  // ===== SEO: 动态更新 meta 标签 =====
+  const baseUrl = 'https://lawoozhe123.github.io/pdf-knowledge-base-/';
+  const pageUrl = `${baseUrl}detail.html?id=${r.id}`;
+  const seoTitle = `${r.title} 免费下载 PDF — 我的 PDF 知识库`;
+  const seoDesc = `${r.desc} 共 ${r.pages || '?'} 页，${r.size || ''}。免费下载 PDF 资料。`;
+  const seoKeywords = [r.title, ...(r.tags||[]), catName(r.category), 'PDF下载', '免费PDF'].join(',');
+
+  // 更新 title
+  const titleEl = document.getElementById('pageTitle');
+  if (titleEl) titleEl.textContent = seoTitle;
+  document.title = seoTitle;
+
+  // 更新 meta description
+  const descEl = document.getElementById('pageDesc');
+  if (descEl) descEl.setAttribute('content', seoDesc);
+
+  // 更新 keywords
+  const kwEl = document.getElementById('pageKeywords');
+  if (kwEl) kwEl.setAttribute('content', seoKeywords);
+
+  // 更新 canonical
+  const canEl = document.getElementById('pageCanonical');
+  if (canEl) canEl.setAttribute('href', pageUrl);
+
+  // 更新 Open Graph
+  const ogT = document.getElementById('ogTitle');
+  if (ogT) ogT.setAttribute('content', seoTitle);
+  const ogD = document.getElementById('ogDesc');
+  if (ogD) ogD.setAttribute('content', seoDesc);
+  const ogU = document.getElementById('ogUrl');
+  if (ogU) ogU.setAttribute('content', pageUrl);
+
+  // 更新 JSON-LD 结构化数据
+  const ldEl = document.getElementById('jsonLd');
+  if (ldEl) {
+    const catLabel = catName(r.category);
+    ldEl.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": r.title,
+      "description": r.desc,
+      "url": pageUrl,
+      "bookFormat": "EBook",
+      "numberOfPages": r.pages,
+      "inLanguage": "zh-CN",
+      "keywords": (r.tags||[]).join(', '),
+      "genre": catLabel,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY",
+        "availability": "https://schema.org/InStock"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "我的 PDF 知识库",
+        "url": baseUrl
+      }
+    });
+  }
+
   const rel = RESOURCES.filter(x => x.id !== r.id && x.category === r.category).slice(0, 3);
   const rs = document.getElementById('relatedSection');
   if (rs && rel.length) {
