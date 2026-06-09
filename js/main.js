@@ -168,7 +168,7 @@ function initDetail() {
   document.title = r.title + ' - ' + t('siteName');
 
   // ===== SEO: 动态更新 meta 标签 =====
-  const baseUrl = 'https://lawoozhe123.github.io/pdf-knowledge-base-/';
+  const baseUrl = 'https://learninghub-pro.github.io/pdf-knowledge-base-/';
   const pageUrl = `${baseUrl}detail.html?id=${r.id}`;
   const seoTitle = `${r.title} 免费下载 PDF — 我的 PDF 知识库`;
   const seoDesc = `${r.desc} 共 ${r.pages || '?'} 页，${r.size || ''}。免费下载 PDF 资料。`;
