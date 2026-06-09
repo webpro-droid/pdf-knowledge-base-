@@ -13,4 +13,4 @@ User-agent: Googlebot
 Allow: /
 
 # Sitemap 地址（让 Google 自动发现全站地图）
-Sitemap: https://lawoozhe123.github.io/pdf-knowledge-base-/sitemap.xml
+Sitemap: https://learninghub-pro.github.io/pdf-knowledge-base-/sitemap.xml
