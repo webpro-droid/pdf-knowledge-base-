@@ -3,8 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="siteName">PDF 详情 - 我的 PDF 知识库</title>
-  <meta name="robots" content="index, follow">
+
+  <!-- SEO meta 由 JS 动态注入，这里是默认值 -->
+  <title id="pageTitle">PDF 详情 — 我的 PDF 知识库</title>
+  <meta name="description" id="pageDesc" content="免费下载优质 PDF 资料 — 我的 PDF 知识库">
+  <meta name="keywords" id="pageKeywords" content="PDF下载,免费资料,知识库">
+  <meta name="robots" content="index, follow, max-snippet:-1">
+  <link rel="canonical" id="pageCanonical" href="https://lawoozhe123.github.io/pdf-knowledge-base-/detail.html">
+
+  <!-- Open Graph 动态由 JS 注入 -->
+  <meta property="og:type" content="article" id="ogType">
+  <meta property="og:title" id="ogTitle" content="PDF 详情 — 我的 PDF 知识库">
+  <meta property="og:description" id="ogDesc" content="免费下载优质 PDF 资料">
+  <meta property="og:url" id="ogUrl" content="https://lawoozhe123.github.io/pdf-knowledge-base-/detail.html">
+  <meta property="og:site_name" content="我的 PDF 知识库">
+
+  <!-- JSON-LD 动态由 JS 注入 -->
+  <script type="application/ld+json" id="jsonLd">{}</script>
+
   <link rel="stylesheet" href="css/style.css">
   <style>
     .pdf-viewer {
