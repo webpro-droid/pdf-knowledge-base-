@@ -246,6 +246,17 @@ const RESOURCES = [
     downloads: 0,
     tags: ['Markdown', '写作', '效率'],
   },
+  {
+    id: 21,
+    title: 'Epson 投影仪 G5650W 使用指南',
+    category: 'tech',
+    desc: 'Epson PowerLite Pro G5650W 投影仪安装与操作手册，含网络设置与维护说明。',
+    file: 'epson-g5650w-guide.pdf',
+    pages: 28,
+    size: '0.12 MB',
+    downloads: 0,
+    tags: ['投影仪', 'Epson', '手册'],
+  },
 ];
 
 // ========== 工具函数 ==========
