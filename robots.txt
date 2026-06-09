@@ -1,0 +1,16 @@
+# 我的 PDF 知识库 — robots.txt
+# 告诉搜索引擎怎么爬我的网站
+
+User-agent: *
+Allow: /
+
+# 不需要爬 JS/CSS 源文件本身（爬内容就够了）
+Disallow: /js/
+Disallow: /css/
+
+# 允许 Google 爬所有页面
+User-agent: Googlebot
+Allow: /
+
+# Sitemap 地址（让 Google 自动发现全站地图）
+Sitemap: https://lawoozhe123.github.io/pdf-knowledge-base-/sitemap.xml
