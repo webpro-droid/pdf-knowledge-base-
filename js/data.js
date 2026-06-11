@@ -247,6 +247,17 @@ const RESOURCES = [
     tags: ['Markdown', '写作', '效率'],
   },
   {
+    id: 22,
+    title: 'CCNA 200-301 中文深度学习指南',
+    category: 'tech',
+    desc: '思科 CCNA 200-301 认证中文精讲，涵盖网络基础、IP 地址、路由交换、安全与自动化等核心考点。',
+    file: 'CCNA_200-301_v1.1_Chinese_Deep_Dive_Guide.pdf',
+    pages: 0,
+    size: '0.39 MB',
+    downloads: 0,
+    tags: ['CCNA', '思科', '网络认证', '计算机网络'],
+  },
+  {
     id: 21,
     title: 'Epson 投影仪 G5650W 使用指南',
     category: 'tech',
